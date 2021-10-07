@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- <link rel="icon" type="image/png" sizes="36x36" href="/images/favicon.png"> -->
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="../public/css/fontawsome/fontawesome.min.css">
+    <link rel="stylesheet" href="../public/css/fontawsome/solid.min.css">
+    <link rel="stylesheet" href="../public/css/fontawsome/brands.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- plugins -->
+  
+    <!-- <link rel="stylesheet" href="css/plugins/owl.theme.default.min.css"> -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Griffy&display=swap" rel="stylesheet">
+    <!-- main Styles -->
+    <link rel="stylesheet" href="../public/font/flaticon.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/colors/color.css">
+    <link rel="stylesheet" href="../public/css/userProfile.css">
+    <link rel="stylesheet" href="../public/css/new-preloader.css">
+    <!-- filepond image plugins -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+    <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+    <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script defer   src="./../public/js/imageUpload.js"></script>
+    <title> | user profile | </title>
+
+</head>
+<!--   -->
+<body onload="return server_error();" style="background-color: #EBEDF3!important;">
+
+<!-- ? Preloader Start -->
+<!-- <div id="preloader-active">
+  <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+          <div class="preloader-circle"></div>
+          <div class="preloader-img pere-text ">
+              <img src="../public/photos/new/preloader.gif" alt="loader">
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+<section class="profile-banner" >
+    <nav class=" col-lg-12 navbar navbar-expand-lg navbar-dark ftco_navbar p-2  position-fixed ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="/"><img src="../public/photos/imgs/logo.PNG" alt="logo" width="180px" height="70px" ></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> <i class="fa fa-bars"></i> </span> 
+          </button>
+          <div class="collapse navbar-collapse ml-auto" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a href="/" class="nav-link ">Home</a></li>
+              <li class="nav-item"><a href="about" class="nav-link ">about us</a></li>
+              <li class="nav-item"><a href="how_it_work" class="nav-link ">How It Works</a></li>
+              <li class="nav-item"><a href="faqs" class="nav-link ">FAQS</a></li>
+              <li class="nav-item"><a href="contact" class="nav-link  ">Contact us</a></li>
+              <!-- <li class="nav-item"><a href="loginpage" class="nav-link  ">logIn/signUp</a></li> -->
+
+              <li class="nav-item ml-5 ">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12 col-sm-12 row  welcomeTexte">
+                    <div class="  col-lg-12 col-md-12 col-sm-12 ">
+                      <div class=" text-white text-center mt-5 ">
+                        <h2 class="display-3"> Welcome <%=user.Fname%> <%=user.Lname%>  </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="animate-divs">
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    
+    </div>
+
+
+</section>
+
+      
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+<section  class="department" id="department">
+<div class="container">
+<div  class="row">
+  <div  class=" col-lg-3 col-md-4 mt-5 Tabs-nav">
+      <!-- Tabs nav -->
+      <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="  nav-link py-2 p-2   active" id="v-pills-home-tab" data-toggle="pill" href="#dashbord" role="tab" aria-controls="v-pills-home" aria-selected="true">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-cog mr-3 "></i>  dashbord</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-profile-tab" data-toggle="pill" href="#Mybooking" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-list mr-3  "></i>  Mybooking</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-messages-tab" data-toggle="pill" href="#Reviews" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fas fa-comment-dots mr-3 "></i>  my Reviews</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-messages-tab" data-toggle="pill" href="#My_orderd" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="  fa fa-shopping-cart mr-3  "></i>  My orderd</span></a>
+            <hr class="p-0 m-0">
+          <!-- <a class="  nav-link py-2 p-2  " id="v-pills-settings-tab" data-toggle="pill" href="#Statementas" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-list-alt mr-3 "></i>  Statementas</span></a>
+            <hr class="p-0 m-0"> -->
+          <a class="  nav-link py-2 p-2  " id="v-pills-settings-tab" data-toggle="pill" href="#Account_Setting" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase" id="click_account"><i class="fa fa-user-cog mr-3 "></i>  Account Setting</span></a>
+            <hr class="p-0 m-0">
+            <a class="  nav-link py-2 p-2  " id="v-pills-settings-tab" data-toggle="pill" href="#change_password" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase" id="click_password" ><i class="fa fa-user-cog mr-3 "></i>  change password</span></a>
+            <hr class="p-0 m-0">
+         <a class="  nav-link py-2 p-2  " data-toggle="modal" data-target="#exampleModal"  id="v-pills-settings-tab"href="#delete_profile" role="tab">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-trash-alt mr-3"></i> Delete Profile</span></a>
+            <!-- ///////////////////////////////////////////////// -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog pop-up-body " role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <i class="fas fa-frown-open"></i>
+                          <h4 class="delete-message mt-3">You Want To Delete?!!</h4>
+                          <div class="row justify-content-center align-items-center">
+                            <form method="POST" action="/delete_profile">
+                          <button class="yes-del btn p-1 pl-3 pr-3 mr-2" > Yes, delete </button>
+                        </form>
+                          <button class=" cancle-del btn p-1 pl-3 pr-3 ml-2" data-dismiss="modal"> no, cancel </button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+            <!-- ////////////////////////////////////////////////// -->
+              <hr class="p-0 m-0">
+              <form method="POST" action="logout"> <a class="  nav-link py-2 p-2  " href="#!"  id="v-pills-settings-tab"  aria-controls="v-pills-settings" aria-selected="false">
+              <span class=" text-dark  font-weight-bold small text-uppercase"><i class=" fas fa-sign-out-alt mr-3 "></i></form><button type="submit" class="btn "> Sign-out</button> </span></a></form>
+                
+          </div>
+
+          
+          <div class="animate-divs">
+            <div></div>
+          </div>
+
+
+  </div>
+<!-- ////////////////////////////////////// -->
+  <div  class="col-lg-9 col-md-8 mt-5">
+      <!-- Tabs content -->
+      <div class="tab-content" id="v-pills-tabContent">
+          <!--///////////////////////////////////////////////////////////////  -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->         
+          <div class="tab-pane fade shadow rounded bg-white show active p-5" id="dashbord" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="row tab-text">
+              <!-- style="background-color: #1E73BE;" -->
+              <div  class="col-lg-10 ml-auto m-auto bg-danger text-white ">
+                <div class="welcomed-text p-2">
+                  <h3 class="mt-3">welcome to your account</h3>
+                  <p style="color: #F6FBFD;" class="mt-4">my account gives you a quick access to settings and tools for mangining your account like
+                    [Changing Account Details] and [Changing Password] . you can manage orderds booking and statement and may more
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <div class="tab-pane fade shadow rounded bg-white show  p-5" id="Mybooking" role="tabpanel" aria-labelledby="v-pills-home-tab">
+           
+           <h4>MY BOOKINGS</h4>
+            <div class="row tab-text cart-list">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Resturant name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">status</th>
+                    <th scope="col">details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>MCDONALDS</td>
+                    <td>january 5,2021</td>
+                    <td class="processing"> <span>processing</span> </td>
+                    <td><button  type="button" data-toggle="modal" data-target="#exampleModal-order-1"  class="order-btn border border-dark"> <i class="fa fa-plus text-dark mt-1"></i> </button></td>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal-order-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title text-uppercase " id="exampleModalLabel">Booking Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  
+                                  <div class="modal-body">
+                                    <h4 class="  model-name text-uppercase mt-2" >RESTURANT NAME</h4>
+                                      <ul class="ml-2">
+                                        <li class=" mt-2 modal-order-data">
+                                          <span class="first-span">Booking id :</span>
+                                          <span class="ml-1 second-span">((the meal id))</span>
+                                        </li >
+                                        <li class=" mt-2  modal-order-data">
+                                          <span class="first-span">Booking date :</span>
+                                          <span class="ml-1 second-span">((date and time))</span>
+                                        </li >
+                                      </ul>
+
+
+                                      <hr>
+                                      <h4 class=" model-name text-uppercase mt-2" >Customer Deatil</h4>
+                                      <ul class="ml-2">
+                                        <li class=" mt-2 modal-order-data">
+                                          <span class="first-span">FIRST NAME:</span>
+                                          <span class="ml-1 second-span">((the first person name))</span>
+                                        </li >
+                                        <li class=" mt-2 modal-order-data">
+                                          <span class="first-span">LAST NAME:</span>
+                                          <span class="ml-1 second-span">((the last name))</span>
+                                        </li >
+                                        <li class=" mt-2 modal-order-data">
+                                          <span class="first-span"> EMAIL:</span>
+                                          <span class="ml-1 second-span">((the Email EX :cashitebay@gmail.com ))</span>
+                                        </li >
+                                      </ul>
+
+                                    <div class="text-center mt-5 ">
+                                      <button class=" btn btn-primary p-2 "> Your booking is Processing </button>
+                                    </div>
+
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+
+
+
+            
+            </div>
+          
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          
+          
+            
+
+          <div  class="tab-pane fade shadow rounded bg-white show  p-5" id="Reviews" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                               <h5  class="review-line">REVIEW GIVEN BY <%=user.Fname%> </h5>
+ 
+            <%user.reviews.forEach(review=>{%>
+
+            
+            <div  class="d-flex">
+              <div class="mt-3"><h6><%=review.review%> </h6></div>
+              
+            </div>
+            <br>
+            
+           
+            <div class="">
+              <p class="p-in-review"><%=review.time%></p>
+              <h5 class="h5-in-review"> Restaurant:<%=review.restaurant_name%>  </h5>
+            </div>
+            <hr style="height: 3px; background-color: #f30928;">
+          <%})%>
+          
+          </div>
+        
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <div class="tab-pane fade shadow rounded bg-white show  p-5" id="My_orderd" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            
+            <h5 class="">MY ORDERS</h5>
+            <hr>
+            <div  class="row ">
+            <% if(user.history){%>
+              <%user.history.forEach(history=>{%>
+              <div  class="col-lg-6 p-3 ">
+                <div class=" p-3 order-border user-orders">
+                  <div class="d-flex">
+                    <div class=""><%=history.restaurant_name%></div>
+                   <div class="ml-3 mt-1"><strong><%=history.restaurantName%> </strong>  <br> <p class="p-in-order"> breakfast-takeaway </p></div>
+                   <div class=" text-danger"><p class="ml-5"><%=history.Price%></p></div>
+                  </div>
+                  
+                  <hr>
+                  <div  class="">
+                   <% if(history.dishes){%>
+                    <%for(let i=0;i< history.dishes.length;i++){%>
+                    <h6>  <%=history.dishes[i]%>:<%=history.meal_price[i]%> </h6>
+                  <%}  }%>
+                  <p>VAT:13%</p>
+                   <p><%=history.notes%></p>
+                    <p class="p-in-review"><%=history.time%></p> 
+                  </div>
+
+                                
+                          
+                </div>
+              </div>
+            <%})%>
+            <% } %>
+
+            </div>
+
+          </div>
+
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+           <div class="tab-pane fade shadow rounded bg-white show  p-5" id="Account_Setting" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h5>ACCOUNT SETTING</h5>
+            <form id="myForm1" action="User_Update_Dashboard" method="POST">
+            <div class="row">
+              <div class="col-lg-6">
+                
+                  <div class="form-group">
+                    <input  type="text" class="form-control" id="exampleInputEmail1" name="Fname"  placeholder="<%=user.Fname%>" >
+                  </div>
+                  
+                  <p id="warning_Fname"></p>
+                  
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="Lname" placeholder="<%=user.Lname%>" >
+                  </div>
+
+                  <p id="warning_Lname"></p>
+                  
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="<%=user.email%>">
+                    <%if(err.email){%>
+                      <p id="server_err_account"><%=err.email%></p>
+                    <%}%>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputPhone" name="number" placeholder="<%=user.number%>">
+                    <%if(err.number){%>
+                      <p id="server_err_account"><%=err.number%></p>
+                    <%}%>
+                    
+                  </div>
+                  
+                  <p id="warning_number"></p>
+                
+              </div>
+              <div  class="col-lg-6 justify-content-center align-items-center" height="180">  
+                 
+                 <img class="img-fluid  ml-5 " style="border-radius: 50%;" src="<%=user.image_path%>"    width="150" height="200"  >
+                 
+
+                <h4 class="ml-5 ">Upload Your Image </h4>
+
+                <input  name="uploadImage" id="defultImg" class="img-fluid filepond p-5 mt-5 ml-5 up-file" type="file" alt="" width="180" height="180" id="inpUpload">
+                
+                <div  class="p-3 row justify-content-center align-items-center">
+
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger ml-2" onClick="return checkform();">Submit</button>
+            </div>
+
+
+           </form>
+           </div>
+           <!-- ///// ////////////////////////////////////////////////////////// -->
+           <!-- /////////////////////////////////////////////////////////////// -->
+           <!-- /////////////////////////////////////////////////////////////// -->
+         
+           <div class="tab-pane fade shadow rounded bg-white show  p-5" id="change_password" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h5>CHANGE PASSWORD</h5>
+         
+            <div id="myF" class="row">
+              <form  onSubmit="return checkform_password();" id="myForm2" action="/changePassword" method="POST">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input type="password" class="form-control col-lg-12" name="password" id="exampleInputPassword1" placeholder="Old Password" >
+                  <%if(err_password){%>
+                    <h4 class="mt-3" id="server_err_password" style="text-align: center;"> <%=err_password%></h4>
+                    <%}%>
+              </div>
+              <div class="form-group">
+                
+                <input type="password" class="form-control col-lg-12" name="newPassword" id="exampleInputPassword2" placeholder="New Password">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control col-lg-12" name="confirmNewPassword" id="exampleInputPassword3" placeholder="Confirm Password" >
+              </div>
+            </div>
+            <p id="warning_password"></p>
+              <button type="submit" class="btn btn-danger ml-3">Submit</button>
+
+            </div>
+          </form>
+          </form>
+          </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+        </div>      
+      </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+  <section class="doc-photo">
+    <div class="container">
+      <!-- <h1 class="text-center ">mostafa</h1> -->
+      <div class="text-center doc-photo-marg">
+        <img data-aos="fade-down" data-aos-duration="700" data-aos-delay="100" class=" doctors-img-pre  ml-auto img-fluid img-responsive" 
+        src="../public/photos/imgs/white-logo.PNG" width="200px" height="200px" alt="doctors">
+          <p class="p_has_fs">We Care About Your Happiness </p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path  fill="#eb102d" fill-opacity="1" d="M0,192L120,202.7C240,213,480,235,720,234.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+  </svg>
+  <footer class="pt-4 section footer-classic context-dark bg-image p-5">
+      
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-lg-3 col-md-6 col-sm-12 ">    
+  
+            <div class="pr-xl-4"><a class="footer-brand" href="index.html"><h1 style="color: #ffffff;">TAKE AWAY</h1></a>
+              <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+            <img class="img-fluid img-responsive" src="../public/photos/footer-img-300x134.png" alt="">
+            <div class=" mr-3 social">
+              <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-twitter"></i></a>
+              <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-facebook"></i></a>
+              <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-instagram"></i></a>
+            </div>
+  
+            </div>
+          </div>
+        <!-- /////////////////////////////// -->
+          <div class="col-lg-3 col-md-6 col-sm-12 text-center footer-marg">
+            <h5>POPULAR CITIES</h5>
+            <ul class="nav-list ">
+              <li><a href="#">10th of ramadan</a></li>
+              <li><a href="#">Alf maskan</a></li>
+              <li><a href="#">zagazeg</a></li>
+              <li><a href="#">alexandria</a></li>
+              <li><a href="#">the red sea</a></li>
+            </ul>
+            <a class="about-link " href="index.html">
+               <h3 class="text-light mt-2" style="font-family: 'La Belle Aurore', cursive!important;"> TAKE AWAY </h3>
+            </a> 
+  
+          </div>
+            <!-- //////////////////////////// -->
+                <!-- /////////////////////////////// -->
+          <div class="col-lg-3 col-md-6 col-sm-12 text-center footer-marg">
+            <h5>MENU</h5>
+            <ul class="nav-list ">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">HOW IT WORKS</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+            <a class="about-link " href="index.html">
+            </a> 
+  
+          </div>
+            <!-- //////////////////////////// -->
+            <div class="col-lg-3 col-md-6 col-sm-12 ">
+              <h5>CONTACTS</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>798 South Park Avenue, Jaipur, Raj</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">TAKE_AWAY@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:1064697587">01064697587</a> <br> <span>or</span> <br> <a href="tel:1143067577">01143067577</a>
+                </dd>
+              </dl>
+            </div>      
+            <!-- //////////////////////////// -->
+        </div>
+        <!-- ///////////////////////// -->
+  
+        <hr style="background-color: rgb(255, 255, 255);">
+        <div class="row p-3">
+          <h6 class="mt-3 ml-3 ">Copyright ©2020 All rights reserved | This template is  made  by <a href="https://www.facebook.com/mostafa.emadgomaa">HTI STUDENT </a>  </h6>
+          <span class="ml-auto mr-3" class="socials">
+            <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-twitter"></i></a>
+            <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-facebook"></i></a>
+            <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-google-plus"></i></a>
+            <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-pinterest"></i></a>
+            <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-dribbble"></i></a>
+  
+          </span>
+        </div>
+  
+      </div>
+    </footer>
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+  <!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- bootstrap -->
+<script src="../public/js/bootstrap/jquery-3.5.1.js"></script>
+<script src="../public/js/bootstrap/popper.min.js"></script>
+<script src="../public/js/bootstrap/bootstrap.min.js"></script>
+<!-- fontawsome -->
+<script src="../public/js/fontawsome/fontawesome.min.js"></script>
+<script src="../public/js/fontawsome/solid.min.js"></script>
+<script src="../public/js/fontawsome/brands.min.js"></script>
+<!-- plugins -->
+<!-- <script src="../js/plugins/vegas.js"></script>
+<script src="../js/plugins/bootstrap-datepicker.js"></script>
+<script src="../js/plugins/jquery.timepicker.min.js"></script>
+<script src="../js/plugins/jquery.nice-select.js"></script>
+<script src="../js/plugins/owl.carousel.min.js"></script>
+<script src="../js/scrollax.min.js"></script>
+<script src="../js/plugins/magicscroll.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+  <!-- main Styles --> 
+  <script src="../public/js/custom.js"></script>
+    <script>
+      
+      $(function() {
+  $('.dropdown-menu li a').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 49
+    }, 1000);
+    event.preventDefault();
+  });
+}); 
+
+// //////////////////////////////////////////////////////
+
+const input=document.querySelector('#inpUpload');
+  const img=document.querySelector('#defultImg');
+  // ///////////////
+    input.addEventListener('change' , function () {
+      const uploadFile = input.files[0]; 
+        if (uploadFile) {
+          const reader = new FileReader();
+          reader.addEventListener('load' , function () {
+            img.setAttribute('src' , reader.result);
+          });
+          reader.readAsDataURL(uploadFile);
+        } else{
+          img.setAttribute('src' , 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-library.com%2Ficon%2Favatar-icon-images-4.html&psig=AOvVaw1C0lmG1D6JHoKmq9jAuxMd&ust=1614599422091000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCxvdzBjO8CFQAAAAAdAAAAABAD');
+
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+<script src="./../public/js/script.js"></script>  
+  </body>
+  </html>

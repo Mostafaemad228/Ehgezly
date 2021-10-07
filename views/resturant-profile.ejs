@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- <link rel="icon" type="image/png" sizes="36x36" href="/images/favicon.png"> -->
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="../public/css/fontawsome/fontawesome.min.css">
+    <link rel="stylesheet" href="../public/css/fontawsome/solid.min.css">
+    <link rel="stylesheet" href="../public/css/fontawsome/brands.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="../public/css/plugins/select2.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Griffy&display=swap" rel="stylesheet">
+    <!-- main Styles -->
+    <link rel="stylesheet" href="../public/font/flaticon.css">
+    <link rel="stylesheet" href="../public/css/colors/color.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/resturantProfile.css">
+    <link rel="stylesheet" href="../public/css/new-preloader.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- filepond image plugins -->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+  <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <script defer   src="./../public/js/imageUpload.js"></script>
+
+    <title> | Resturant profile | </title>
+
+</head>
+<body style="background-color: #EBEDF3!important;" onload="onpageload()">
+
+<!-- ? Preloader Start -->
+<!-- <div id="preloader-active">
+  <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+          <div class="preloader-circle"></div>
+          <div class="preloader-img pere-text ">
+              <img src="../public/photos/new/preloader.gif" alt="loader">
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+<section class="resturant-banner">
+  <nav class=" col-lg-12 navbar navbar-expand-lg navbar-dark ftco_navbar p-2  position-fixed ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="../public/photos/imgs/logo.PNG" alt="logo" width="180px" height="70px" ></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <i class="fa fa-bars"></i> </span> 
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="/restprofile" class="nav-link ">Home</a></li>
+          <li class="nav-item"><a href="about" class="nav-link ">about us</a></li>
+          <li class="nav-item"><a href="how_it_work" class="nav-link  ">How It Works</a></li>
+          <li class="nav-item"><a href="faqs" class="nav-link ">FAQS</a></li>
+          <li class="nav-item"><a href="contact" class="nav-link  ">Contact us</a></li>
+          
+
+          <li class="nav-item ml-5 ">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+      <div>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 col-sm-12 text-center welcomeTexte">
+                    <div class=" d-flex resturant-logo">
+                        <div class=" p-3 ">
+                          <img class="" src="<%=rest.image_path%>" width="80" height="80"  alt=""> 
+                        </div>
+                         <div class=" p-3 text-light mt-4">
+                          <h4 class="text-left"><%=rest.restaurantName%></h4>
+                          <p>  <i class="fas fa-pizza-slice"></i><%=rest.kitchen%></p>
+                         </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="animate-divs">
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    
+    </div>
+
+
+</section>
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<section  class="department" id="department">
+<div class="container">
+<div  class="row">
+  <div  class=" col-lg-3 col-md-4 mt-5 Tabs-nav">
+      <!-- Tabs nav -->
+      <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="  nav-link py-2 p-2   active" id="v-pills-home-tab" data-toggle="pill" href="#dashbord" role="tab" aria-controls="v-pills-home" aria-selected="true">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-cog mr-3 "></i>  DASHBOARD</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-profile-tab" data-toggle="pill" href="#MY_RESTAURANT" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase" id ="restsittingsButton"><i class=" fas fa-utensils mr-3  "></i>  MY RESTAURANT</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-messages-tab" data-toggle="pill" href="#MENU_BUILDER" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class=" fab fa-elementor mr-3 "></i>  MENU BUILDER</span></a>
+            <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-messages-tab" data-toggle="pill" href="#tables" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class=" fab fa-elementor mr-3 "></i> tables</span></a>    
+          <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " id="v-pills-messages-tab" data-toggle="pill" href="#ORDERS" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="  fa fa-shopping-cart mr-3  "></i>  ORDERS</span></a>
+         
+      
+              <hr class="p-0 m-0">
+              <a class="  nav-link py-2 p-2  " id="v-pills-settings-tab" data-toggle="pill" href="#CHANGE_PASSWORD" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                <span class=" text-dark font-weight-bold small text-uppercase" id ="changePasswordButton"><i class="fa fa-user-cog mr-3 "></i>  CHANGE PASSWORD</span></a>
+              <hr class="p-0 m-0">
+          <a class="  nav-link py-2 p-2  " data-toggle="modal" data-target="#DELETE-profile" id="v-pills-settings-tab"href="#delete_profile" role="tab">
+              <span class=" text-dark font-weight-bold small text-uppercase"><i class="fa fa-trash-alt mr-3"></i>  DELETE PROFILE</span></a>
+            <!-- ///////////////////////////////////////////////// -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="DELETE-profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog pop-up-body " role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <i class="fas fa-frown-open"></i>
+                          <h4 class="delete-message mt-3">You Want To Delete?!!</h4>
+                          <div class="row justify-content-center align-items-center">
+                          <form action="/deletrest" method="post"><button class="yes-del btn p-1 pl-3 pr-3 mr-2" > Yes, delete </button></form>
+                          <button class=" cancle-del btn p-1 pl-3 pr-3 ml-2" data-dismiss="modal"> no, cancle </button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+            <!-- ////////////////////////////////////////////////// -->
+              <hr class="p-0 m-0">
+              <form method="POST" action="restlogout"> <a class="  nav-link py-2 p-2  " href="#!"  id="v-pills-settings-tab"  aria-controls="v-pills-settings" aria-selected="false">
+                <span class=" text-dark  font-weight-bold small text-uppercase"><i class=" fas fa-sign-out-alt mr-3 "></i></form><button type="submit" class="btn "> Sign-out</button> </span></a></form>
+                
+          </div>
+
+          <div class="animate-divs">
+
+            <div></div>
+         
+          </div>
+      
+
+
+  </div>
+<!-- ////////////////////////////////////// -->
+  <div  class="col-lg-9 col-md-8 mt-5">
+      <!-- Tabs content -->
+      <div class="tab-content" id="v-pills-tabContent">
+          <!--///////////////////////////////////////////////////////////////  -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->         
+          <div class="tab-pane fade shadow rounded bg-white show active p-5" id="dashbord" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="row tab-text">
+              <div  class="col-lg-10 ml-auto m-auto dashbord-bac text-white ">
+                <div class="welcomed-text p-2">
+                  <h3 class="mt-3">Welcome To Your Restaurant.</h3>
+                  <p  class="mt-4">
+                    Restaurant Dashboard gives you quick access
+                    to settings and tools for managing your Account like [Change address] and [Change password] .
+                    You can [manage Restaurant] Build Menu , Manage Orders, Bookings, Reviews, Memberships,
+                    Withdrawals, Earnings, Statements, Change Password, Location and if you are you 
+                    Restaurant Owner can also [Manage Team].</p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <!-- //////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////// -->
+
+            <h4>RECENT ORDERS</h4>					
+            <div class="row tab-text  cart-list">
+                <table class="table scroll-x-table text-center">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col"> ORDER ID</th>
+                      <th scope="col">custumer name</th>
+                      <th scope="col">DATE</th>
+                      <th scope="col">TOTAL PRICE</th>
+                      
+                      <th scope="col">DETAIL</th>
+                    </tr>
+                  </thead>
+                  <%let k=0%>
+                  <% rest.orders.forEach(function(order) { %>
+                  <tbody>
+                  <tr>
+                   
+                    
+                      <td><%=order._id%></td>
+                      <td><%=order.user.Fname%> <%=order.user.Lname%></td>
+                      <td><%=order.time%></td>
+                      <td><%=order.Price%></td>
+                      
+                      <td><button id="3415"  type="button" data-toggle="modal" data-target="#RECENT_ORDERS<%=k%>"  class="order-btn border border-dark"> <i class="fa fa-plus text-dark mt-1"></i> </button></td>
+                              <!-- Modal -->
+                              <div class="modal fade" id="RECENT_ORDERS<%=k%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content modal-style">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title text-uppercase " id="exampleModalLabel">Order Detail</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="d-flex" id="RECENT_ORD">
+                                            <ul class="Extra-category-name">
+                                        
+                                                <li class="mt-2"><span class="restu-detals-span1"  >ORDER ID:</span><span  class="restu-detals-span2">  <%=order._id%>  </span></li>
+                                                <li class="mt-2"><span class="restu-detals-span1"  >Order dishes:</span></li>
+                                                <% order.dishes.forEach(function(dish) { %>
+                                                  <li class="mt-2"><span class="restu-detals-span1"  ></span><span id="orderid" class="restu-detals-span2"> &emsp;  <%=dish%>  </span></li>
+                                                 <%}) %>
+                                                 <li class="mt-2"><span class="restu-detals-span1"  >notes:</span><span  class="restu-detals-span2">  <%=order.notes%>  </span></li>
+                                                
+                                            </ul>
+                                            <ul class="ml-auto mr-150">
+                                                <h5 class="font-weight-bold">Customer Detail</h5>
+                                                <li class="mt-2"><span class="restu-detals-span1" >NAME :</span><span class="restu-detals-span2">  <%=order.user.Fname%> <%=order.user.Lname%>  </span>  </li>
+                                                <li class="mt-2"><span class="restu-detals-span1" >PHONE NUMBER :</span><span class="restu-detals-span2"> <%=order.user.number%></span>  </li>
+                                                <li class="mt-2"><span class="restu-detals-span1" >EMAIL:</span> <span class="restu-detals-span2"><%=order.user.email%></span> </li>
+                                                
+                                            </ul>
+                                          </div> 
+                                          <hr>
+                                          <!-- //////////////////////////////////////////////////////////// -->
+                                          
+                                        <!-- //////////////////////////////////////////////////// -->
+                                        <hr>
+                                  <div class="mt-4 font-weight-bolder">
+                                    <h5 class="text-uppercase font-weight-bolder">Order Total</h5>
+                                    <ul>
+                                     
+                                      <li><span> TOTAL: </span>   <span class=" price-span "> <%=order.Price%></span></li> 
+                                    </ul>
+                                  </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                </tr>
+                
+               
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+                <!-- /////////////////////////////////////////////////////////////////////// -->
+               
+            
+          </tbody>
+          <%k=k+1%>
+          <%})%>
+        </table>
+      </div>
+    </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <div class="tab-pane fade shadow rounded bg-white show  p-5" id="MY_RESTAURANT" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            
+            <h5 class="modal-title text-uppercase">Restaurant Settings</h5>
+            <form class="form mt-5 resto-seeting-form " action="/updateRest" method="post" >
+              <div class=" form-row mt-5 ">
+                        <!-- ////////////////////////// -->
+                            <div class=" col-lg-12 col-md-12 col-sm-12 p-1 mt-2  ">
+                              <img class="img-fluid" src="<%=rest.image_path%>" id="defultImg" alt="" width="180" height="180" >
+                              <p>choose logo photo</p>
+                              <input style="width: 100%;" name="img" class="   up-file" type="file"  id="inpUpload">
+                            </div>
+                        <!-- ////////////////////////// -->
+
+                         
+
+                        <!-- ////////////////////////// -->
+                            <div class=" col-lg-6 col-md-12 col-sm-12 p-1 mt-2  ">
+                                <input type="text" class="col-lg-12 p-2" id="restaurantName" value="<%=rest.restaurantName%>"  placeholder="Restaurant Name" name="restaurantName">
+                              </div>
+                        <!-- ////////////////////////// -->
+
+                              <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2  ">
+                                <input type="tel" class="col-lg-12 p-2" id="restaurantPhone" value="<%=rest.restaurantPhone%>"  placeholder="Restaurant Phone" name="restaurantPhone" pattern="[0-1]{2}[0-9]{9}">
+                                <p>format: 01xxxxxxxxx</p>
+                              </div>
+                        <!-- ////////////////////////// -->
+
+                          <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2  ">
+                            <input type="text" class="col-lg-12 p-2" id="manger" value="<%=rest.manger%>"  placeholder="manger Name" name="manger">
+                          </div>
+                        <!-- ////////////////////////// -->
+
+                          <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                            <input type="tel" class="col-lg-12 p-2 mb-3" id="mangerPhone" value="<%=rest.mangerPhone%>"  placeholder=".manger Phone" name="mangerPhone" pattern="[0-1]{2}[0-9]{9}">
+                          </div>
+                        <!-- ////////////////////////// -->
+
+                          <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                            <input type="email" class="col-lg-12 p-2 mb-3" id="email" value="<%=rest.email%>"  placeholder="Email" name="email">
+                            <%if(errorss.email != 0){%>
+                              <%=errorss.email%>
+                              <% } %>
+                          </div>
+                       <!-- ////////////////////////////////////////// -->
+                          <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                            <input type="text" class="col-lg-12 p-2 mb-3" id="username" value="<%=rest.username%>"  placeholder="Username" name="username">
+                            <%if(errorss.username != 0){%>
+                              <%=errorss.username%>
+                              <% } %>
+                           </div>
+                        <!-- ////////////////////////////////////////// -->
+                        <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                          <select class="col-lg-12 p-2 mb-3" name="" id="">
+                            <option  value="">booking table *</option>
+                            <option value="">yes</option>
+                            <option value="">no</option>
+                          </select>
+                        </div>
+                     
+                      <!-- ////////////////////////////////////////// -->
+                    <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                      <input type="text" class="col-lg-12 p-2 mb-3" id="validationCustom" value="<%=rest.pickupfee%>" name="pickupfee" placeholder="pickupfee">
+                    </div>
+
+                  <!-- ////////////////////////////////////////// -->
+                    <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                      <input type="text" class="col-lg-12 p-2 mb-3" id="validationCustom" value="<%=rest.pickuptime%>" name="pickuptime" placeholder="pickuptime">
+                    </div>
+
+                  
+
+                  <!-- ////////////////////////////////////////// -->
+                  <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                    <input type="text" class="col-lg-12 p-2 mb-3" id="validationCustom" value="<%=rest.location.coordinates%>"  placeholder="Long, Lat" name="loc">
+                  </div>
+
+                  <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                    <input type="text" class="col-lg-12 p-2 mb-3" id="validationCustom" value="<%=rest.location.formattedAddress%>"  placeholder="Address, City, Street" name="address">
+                  </div> 
+                  <!-- ////////////////////////////////////////// -->
+         
+             
+               
+                
+                <div class=" col-lg-12 col-md-12 col-sm-12 p-1 mt-2  ">
+                  <textarea placeholder="info"  class="col-lg-12 p-2" name="info" id="" cols="30" rows="10"><%=rest.info%></textarea>
+                </div>
+              <!-- ////////////////////////// -->
+              </div>
+            <button class="btn btn-danger signup-btun  mt-2 p-1 col-lg-2 col-md-2 col-sm-2 mb-3" type="submit">Submit</button>
+           
+          </form> 
+
+          </div>
+          
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+            <div class="tab-pane fade shadow rounded bg-white show  p-5" id="MENU_BUILDER" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <form method="POST" action="/addCat">
+                <div class=" col-lg-12 p-0 m-0"> 
+                  <div class=" ">
+                    <h5 class="font-weight-bolder Extra-category-name" style="color: black;" for="">Add Categories  </h5>
+                    <br>
+                    <select id="select-cat" style="width: 50%!important;color: #9097a1;" class="mul-select p-3 mt-1 mb-3" multiple="true" name="cat">
+                      <option value="0" selected="selected" > food</option>
+                      <option value="pizza" > pizza</option>
+                      <option value="Pasta" > Pasta</option>
+                      <option value="stakes" > stakes</option>
+                      <option value="burgger">burgger</option>
+                      <option value="Beef Roast" > Beef Roast</option>
+                      <option value="Cheese Burger" >Cheese Burger</option>
+                      <option value="Chicken">Chicken </option>
+                      <option value="Chicken Roast">Chicken Roast</option>
+                      <option value="Chines Soup">Chines Soup</option>
+                      <option value="apple pie">apple pie  </option>
+                      <option value="apple juice" > apple juice</option>
+                      <option value="Carrot Juice">Carrot Juice</option>
+                      <option value="coffee">coffee</option>
+                      
+                    </select>
+                    <button class="ml-auto btn btn-success p-1 rounded float-right ">submit</button>
+                  </form>
+                </div>
+                <br>
+            
+              <div class=" col-lg-12 p-0 m-0"> 
+
+                  <div class="tab-pane p-3 active" id="menu_category" role="tabpanel">
+                    <div class="d-flex">
+                      <h5 class="font-weight-bolder Extra-category-name" style="color: black;" for="">adding  meals form</h5>
+                      <button type="button" class="ml-auto btn btn-success p-1 rounded menu_category_btn Required-text float-center"
+                       data-toggle="modal" data-target="#menu_category_modal"> Add meals </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="menu_category_modal" tabindex="-1" role="dialog" aria-labelledby="menu_category_modalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add meals</h5>
+                                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="/categories" method="post">
+                                      <div class="form-row" id="div0">
+                                          <!-- ////////////////////////////////////////// -->
+                                         
+                                      <!-- ////////////////////////// -->
+                                    </div>
+                                    <button class="btn btn-success rounded menu_category_btn ml-auto mt-2 p-1  mb-3"  type="submit"> Add all </button>
+                                    
+                                    <hr>
+                                  </form>
+                                  <button id="button1" class="btn btn-success rounded menu_category_btn ml-auto mt-2 p-1  mb-3"  onclick="return false" type="submit"> Add meal </button>
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                            </div>
+                            
+                    </div>  
+                    <!-- /////////////////////////// -->
+                    <!-- /////////////////////////// -->
+                    <br>
+                    <h5 class="font-weight-bolder Extra-category-name" style="color: black;" for="">Menu Editor  </h5>
+                    <ul class="category-crud mt-5">
+
+                    <li class="category-row">
+                     
+                      <div class="d-flex">
+                        <div class="font-weight-bolder Extra-category-name"> 
+                        <% let i = 0;%>
+                          <% while (i < cats.length) { %>
+                          <p>catagory: <%=cats[i].category%>
+                             <i  id="<%=cats[i].category %>" onclick="getid(this.id)" type="button"  class="text-primary fas fa-edit " data-toggle="modal" data-target="#menu_category_Edit"></i>
+                             <i id="<%=cats[i].category %>" onclick="getid3(this.id)" type="button"  data-toggle="modal" data-target="#DELETE-category" class=" ml-3 text-danger fas fa-trash"></i>  </p>
+         
+                            <% let j=0;%>
+                            
+                            <% while (j < cats[i].meal.length ){ %>
+                              <p>&emsp;meal name: <%=cats[i].meal[j].name  %>
+                                <i  id="<%=cats[i].category %>,<%=cats[i].meal[j].name%>-<%=cats[i].meal[j].price%>_<%=cats[i].meal[j].description%>"type="button" onclick="getid2(this.id)" class="text-primary fas fa-edit " data-toggle="modal" data-target="#menu_meal_Edit" ></i> 
+                                <i id="<%=cats[i].category %>,<%=cats[i].meal[j].name%>" onclick="getid4(this.id)" type="button"  data-toggle="modal" data-target="#DELETE-category-meal" class=" ml-3 text-danger fas fa-trash"></i></p>
+                              <p>&emsp;price:<%=cats[i].meal[j].price  %></i></p>
+                              <p>&emsp;description: <%=cats[i].meal[j].description  %></p>
+                              <br>
+                              <%  j++%>
+                              <% }%>
+                          
+                            <hr>
+                            <%     i++; %>
+                            <%     }%></div>
+                        <div class="ml-auto  Required-text">
+                    
+                          
+                          
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="menu_meal_Edit" tabindex="-1" role="dialog" aria-labelledby="menu_meal_Edit_Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">update meal</h5>
+                                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  <form action="/update"method="post">
+                                    <div id="menu" class="form-row">
+                                        <!-- ////////////////////////////////////////// -->
+                                      
+                                        <!-- ////////////////////////// -->
+                                        <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2  ">
+                                          <input type="text" class="col-lg-12 p-2 mb-3" id="newname" value=""  name="newname">
+
+                                        </div>
+                                      <!-- ////////////////////////// -->
+                                      <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2">                
+                                        <input type="number" class="col-lg-12 p-2 mb-3" id="newprice" value=""  name="newprice"> 
+                                      </div>
+                                      <!-- ////////////////////////// -->
+                                      <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2  ">
+                                        <input type="text" class="col-lg-12 p-2 mb-3" id="newdescription" value="" name="newdescription">
+                                      </div>
+                                    <!-- ////////////////////////// -->
+                                    </div>
+                                    <button class="btn btn-success rounded menu_category_btn ml-auto mt-2 p-1  mb-3" type="submit">update </button>
+                                  
+
+                                    <hr>
+                                  </form>
+
+                                </div>
+                               
+                              </div>
+                            </div>
+                          </div>
+
+
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="menu_category_Edit" tabindex="-1" role="dialog" aria-labelledby="menu_category_Edit_Label" aria-hidden="true">
+                           <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                
+                                <h5 class="modal-title" id="exampleModalLabel">update category</h5>
+                                <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <form action="/update"method="post">
+                                  <div id="catagory" class="form-row">
+                                      <!-- ////////////////////////////////////////// -->
+                                      
+                                      <!-- ////////////////////////// -->
+                                      <div class=" col-lg-6 col-md-6 col-sm-12 p-1 mt-2  ">
+                                        <input type="text" class="col-lg-12 p-2 mb-3" id="validationCustom" value=""  placeholder="updatecategory" name="category">
+                                      </div>
+                                     
+                                    <!-- ////////////////////////// -->
+                                    </div>
+                                    <button class="btn btn-success rounded menu_category_btn ml-auto mt-2 p-1  mb-3" type="submit">update </button>
+                                  
+
+                                    <hr>
+                                </form>
+
+                               </div>
+                               
+                             </div>
+                           </div>
+                        </div>
+
+                        <!-- ///////////////////////////////////////////////// -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="DELETE-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog pop-up-body " role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <i class="fas fa-frown-open"></i>
+                          <h4 class="delete-message mt-3">You Want To Delete?!!</h4>
+                          <div class="row justify-content-center align-items-center">
+                            <form action="/deletcat" method="post" >
+                              <div id=DELETEcategory></div>
+                          <button class="yes-del btn p-1 pl-3 pr-3 mr-2" > Yes, delete </button>
+                        </form>
+                          <button class=" cancle-del btn p-1 pl-3 pr-3 ml-2" data-dismiss="modal"> no, cancle </button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                       <!-- ///////////////////////////////////////////////// -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="DELETE-category-meal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog pop-up-body " role="document">
+                      <div class="modal-content">
+                        <div class="modal-body text-center">
+                          <i class="fas fa-frown-open"></i>
+                          <h4 class="delete-message mt-3">You Want To Delete?!!</h4>
+                          <div class="row justify-content-center align-items-center">
+                            <form id="deletmealform"action="/deletcat" method="post" >
+                            
+                          <button class="yes-del btn p-1 pl-3 pr-3 mr-2" > Yes, delete </button>
+                        </form>
+                          <button class=" cancle-del btn p-1 pl-3 pr-3 ml-2" data-dismiss="modal"> no, cancle </button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                        <!-- /////////////////////////////////////// -->
+
+
+                        </div>
+                      
+                      </div>
+                      <hr>
+                    </li>
+
+
+
+                    </ul>
+                  </div>
+                
+                
+              </div>
+            </div>
+          </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <div class="tab-pane fade shadow rounded bg-white show  p-5" id="tables" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+
+
+            <div id="error"></div>
+            <form id="form" action="/table" method="POST" >
+
+             <div class="form-row">
+
+                 <!-- ////////////////////////// -->
+                 <div class="form-group col-lg-6 col-md-12 col-sm-12 p-1 mt-2  ">
+                   <input type="number" class="col-lg-12 p-2 form-control" id="tableNumber" value=""  placeholder="Table Number" name="tableNumber" min="1" max="100" required>
+                 </div>
+                 <!-- ////////////////////////// -->
+
+                 <!-- ////////////////////////// -->
+                 <div class="form-group col-lg-6 col-md-12 col-sm-12 p-1 mt-2  ">
+                   <input type="number" class="col-lg-12 p-2 form-control" id="people" value=""  placeholder="Number Of Persons" min="1" max="12" name="people" required>
+                 </div>
+                 <!-- ////////////////////////// -->
+             </div>
+             
+            <button class="btn btn-success rounded menu_category_btn ml-auto mt-2 p-1  mb-3" type="submit"> add tables </button>
+
+
+            </form>
+            <a href='/allTables/<%=rest._id%>' class="btn btn-success rounded p-1  ml-auto mt-2 p-1  mb-3" >show all tables</a>
+           
+
+
+
+          </div>
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// --><!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+            <div class="tab-pane fade shadow rounded bg-white show  p-5" id="ORDERS" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              
+              <h3> ORDERS </h3>
+
+              <div class="row tab-text  cart-list">
+
+                <table class="table table-striped  text-center">
+                  <div class="row tab-text  cart-list">
+                    <table class="table scroll-x-table text-center">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col"> ORDER ID</th>
+                          <th scope="col"> cusrtumer name</th>
+                          <th scope="col">DATE</th>
+                          <th scope="col">TOTAL PRICE</th>
+                          
+                          <th scope="col">DETAIL</th>
+                        </tr>
+                      </thead>
+                      
+                      <% rest.orders.forEach(function(order) { %>
+                      <tbody>
+                      <tr>
+                       
+                        
+                          <td><%=order._id%></td>
+                          <td><%=order.user.Fname%> <%=order.user.Lname%></td>
+                          <td><%=order.time%></td>
+                          <td><%=order.Price%></td>
+                          
+                          <td><button id="3415"  type="button" data-toggle="modal" data-target="#RECENT_ORDERS<%=k%>"  class="order-btn border border-dark"> <i class="fa fa-plus text-dark mt-1"></i> </button></td>
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="RECENT_ORDERS<%=k%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content modal-style">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title text-uppercase " id="exampleModalLabel">Order Detail</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="d-flex" id="RECENT_ORD">
+                                                <ul class="Extra-category-name">
+                                            
+                                                    <li class="mt-2"><span class="restu-detals-span1"  >ORDER ID:</span><span  class="restu-detals-span2">  <%=order._id%>  </span></li>
+                                                    <li class="mt-2"><span class="restu-detals-span1"  >Order dishes:</span></li>
+                                                    <% order.dishes.forEach(function(dish) { %>
+                                                      <li class="mt-2"><span class="restu-detals-span1"  ></span><span id="orderid" class="restu-detals-span2"> &emsp;  <%=dish%>  </span></li>
+                                                     <%}) %>
+                                                     <li class="mt-2"><span class="restu-detals-span1"  >notes:</span><span  class="restu-detals-span2">  <%=order.notes%>  </span></li>
+                                                    
+                                                </ul>
+                                                <ul class="ml-auto mr-150">
+                                                    <h5 class="font-weight-bold">Customer Detail</h5>
+                                                    <li class="mt-2"><span class="restu-detals-span1" >NAME :</span><span class="restu-detals-span2">  <%=order.user.Fname%> <%=order.user.Lname%>  </span>  </li>
+                                                    <li class="mt-2"><span class="restu-detals-span1" >PHONE NUMBER :</span><span class="restu-detals-span2"> <%=order.user.number%></span>  </li>
+                                                    <li class="mt-2"><span class="restu-detals-span1" >EMAIL:</span> <span class="restu-detals-span2"><%=order.user.email%></span> </li>
+                                                    
+                                                </ul>
+                                              </div> 
+                                              <hr>
+                                              <!-- //////////////////////////////////////////////////////////// -->
+                                              
+                                            <!-- //////////////////////////////////////////////////// -->
+                                            <hr>
+                                      <div class="mt-4 font-weight-bolder">
+                                        <h5 class="text-uppercase font-weight-bolder">Order Total</h5>
+                                        <ul>
+                                         
+                                          <li><span> TOTAL: </span>   <span class=" price-span "> <%=order.Price%></span></li> 
+                                        </ul>
+                                      </div>
+    
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                    </tr>
+                    
+                   
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                    <!-- /////////////////////////////////////////////////////////////////////// -->
+                   
+                
+              </tbody>
+              <%k=k+1%>
+              <%})%>
+            </table>
+          
+        
+        
+
+              </div>
+            </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+  
+           <!-- /////////////////////////////////////////////////////////////// -->
+           <!-- /////////////////////////////////////////////////////////////// -->
+           <div class="tab-pane fade shadow rounded bg-white show  p-5" id="CHANGE_PASSWORD" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <form action="/restChangePassword"method="POST">
+
+            <h5 class=" text-capitalize mt-3"> CHANGE PASSWORD </h5>
+            <div class="row">
+
+            <div class="col-lg-12">
+              <div class="form-group">
+                <input type="password" class="form-control col-lg-12" id="exampleInputPassword1" placeholder="password" required name="oldpassword">
+              </div>
+              <%if(errorss.password != 0){%>
+              <%=errorss.password%>
+              <% } %>
+              
+              <div class="form-group">
+                <input type="password" class="form-control col-lg-12" id="password" placeholder="new password" required name="newpassword">
+              </div>
+              <div class="form-group">
+                <input type="password"  class="form-control col-lg-12" id="confirm_password" placeholder="confirm password" required>
+              </div>
+            </div>
+
+              <button type="submit" class="btn btn-danger ml-3 ">save</button>
+
+            </div>
+          </form>
+          </div>
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+          <!-- /////////////////////////////////////////////////////////////// -->
+        
+
+
+
+
+
+
+
+
+              </div>
+     
+</section>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<section class="doc-photo ">
+  <div class="container">
+    <!-- <h1 class="text-center ">mostafa</h1> -->
+    <div class="text-center doc-photo-marg">
+      <img data-aos="fade-down" data-aos-duration="700" data-aos-delay="100" class=" doctors-img-pre  ml-auto img-fluid img-responsive" 
+      src="../public/photos/imgs/white-logo.PNG" width="200px" height="200px" alt="doctors">
+      <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" class="p_has_fs">We care about your mental health </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path  fill="#eb102d" fill-opacity="1" d="M0,192L120,202.7C240,213,480,235,720,234.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+</svg>
+<footer class="pt-4 section footer-classic context-dark bg-image p-5">
+    
+    <div class="container">
+      <div class="row row-30">
+        <div data-aos="fade-down" data-aos-duration="700" data-aos-delay="100"  class="col-lg-3 col-md-6 col-sm-12 ">    
+
+          <div class="pr-xl-4"><a class="footer-brand" href="index.html"><h1 style="color: #ffffff;">TAKE AWAY</h1></a>
+            <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+          <img class="img-fluid img-responsive" src="../public/photos/footer-img-300x134.png" alt="">
+          <div class=" mr-3 social">
+            <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-twitter"></i></a>
+            <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-facebook"></i></a>
+            <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-instagram"></i></a>
+          </div>
+
+          </div>
+        </div>
+      <!-- /////////////////////////////// -->
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"  class="col-lg-3 col-md-6 col-sm-12 text-center footer-marg">
+          <h5>POPULAR CITIES</h5>
+          <ul class="nav-list ">
+            <li><a href="#">10th of ramadan</a></li>
+            <li><a href="#">Alf maskan</a></li>
+            <li><a href="#">zagazeg</a></li>
+            <li><a href="#">alexandria</a></li>
+            <li><a href="#">the red sea</a></li>
+          </ul>
+          <a class="about-link " href="index.html">
+             <h3 class="text-light mt-2" style="font-family: 'La Belle Aurore', cursive!important;"> E7gesly </h3>
+          </a> 
+
+        </div>
+          <!-- //////////////////////////// -->
+              <!-- /////////////////////////////// -->
+        <div data-aos="fade-down" data-aos-duration="700" data-aos-delay="300"  class="col-lg-3 col-md-6 col-sm-12 text-center footer-marg">
+          <h5>MENU</h5>
+          <ul class="nav-list ">
+            <li><a href="/restprofile">HOME</a></li>
+            <li><a href="about">ABOUT US</a></li>
+            <li><a href="#">HOW IT WORKS</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+          <a class="about-link " href="index.html">
+          </a> 
+
+        </div>
+          <!-- //////////////////////////// -->
+          <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400"  class="col-lg-3 col-md-6 col-sm-12 ">
+            <h5>CONTACTS</h5>
+            <dl class="contact-list">
+              <dt>Address:</dt>
+              <dd>798 South Park Avenue, Jaipur, Raj</dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>email:</dt>
+              <dd><a href="mailto:#">E7gesly@gmail.com</a></dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>phones:</dt>
+              <dd><a href="tel:#">01064697587</a> <br> <span>or</span> <br> <a href="tel:#">01143067577</a>
+              </dd>
+            </dl>
+          </div>      
+          <!-- //////////////////////////// -->
+      </div>
+      <!-- ///////////////////////// -->
+
+      <hr data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"  style="background-color: rgb(255, 255, 255);">
+      <div class="row p-3">
+        <h6 data-aos="fade-right" data-aos-duration="700" data-aos-delay="550" class="mt-3 ml-3 ">Copyright ©2020 All rights reserved | This template is  made  by <a href="https://www.facebook.com/mostafa.emadgomaa">HTI STUDENT </a>  </h6>
+        <span data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" class="ml-auto mr-3" class="socials">
+          <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-twitter"></i></a>
+          <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-facebook"></i></a>
+          <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-google-plus"></i></a>
+          <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-pinterest"></i></a>
+          <a target="_blank" href="#"><i class=" footerSocialIcon mt-3 m-1 fab fa-dribbble"></i></a>
+
+        </span>
+      </div>
+
+    </div>
+  </footer>
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////// -->
+<!-- bootstrap -->
+<script src="../public/js/bootstrap/jquery-3.5.1.js"></script>
+<script src="../public/js/bootstrap/popper.min.js"></script>
+<script src="../public/js/bootstrap/bootstrap.min.js"></script>
+<!-- fontawsome -->
+<script src="../public/js/fontawsome/fontawesome.min.js"></script>
+<script src="../public/js/fontawsome/solid.min.js"></script>
+<script src="../public/js/fontawsome/brands.min.js"></script>
+<!-- plugins -->
+
+<script src="../public/js/plugins/select2.min.js"></script>
+
+  <!-- main Styles --> 
+  <script src="../public/js/custom.js"></script>
+  <script src="../public/js/multi select.js"></script>
+    <script>
+      
+      $(function() {
+  $('.dropdown-menu li a').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - 49
+    }, 1000);
+    event.preventDefault();
+  });
+}); 
+
+// //////////////////////////////////////////////////////
+
+const input=document.querySelector('#inpUpload');
+  const img=document.querySelector('#defultImg');
+  // ///////////////
+    input.addEventListener('change' , function () {
+      const uploadFile = input.files[0]; 
+        if (uploadFile) {
+          const reader = new FileReader();
+          reader.addEventListener('load' , function () {
+            img.setAttribute('src' , reader.result);
+          });
+          reader.readAsDataURL(uploadFile);
+        } else{
+          img.setAttribute('src' , 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-library.com%2Ficon%2Favatar-icon-images-4.html&psig=AOvVaw1C0lmG1D6JHoKmq9jAuxMd&ust=1614599422091000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCxvdzBjO8CFQAAAAAdAAAAABAD');
+
+        }
+
+    });
+
+
+
+
+    $(document).ready(function(){
+          $(".mul-select").select2({
+                  placeholder: "select what you need", //placeholder
+                  tags: true,
+                  tokenSeparators: ['/',',',';'," "] 
+              });
+          })
+
+  </script>
+<script  >
+    
+  let cat ="<%=cat%>"
+
+  cats=new Array()
+ 
+  let div0 = document.getElementById("div0");
+  let add=document.getElementById("button1")
+  let i=0;
+  let str=""
+
+  for(let j=0;j<cat.length;j=j+1){
+      if(cat[j]==','){
+          cats.push(str)
+          str=""
+      }
+      else if(j==cat.length-1){
+        str=str+cat[j]
+        cats.push(str)
+      }
+      else
+      str=str+cat[j]
+  }
+  console.log(cats)
+
+
+  
+ function form (){
+  
+      let div1 = document.createElement('div');
+      div1.className="col-lg-6 col-md-6 col-sm-12 p-1 mt-2 "
+      let select = document.createElement("select");
+      select.className=" col-lg-12 p-2 mb-3"
+      select.placeholder= "select category"
+      ID=i+"[category]"
+      select.name=ID
+      let option = document.createElement('option');
+         option.text="select"
+         option.value=""
+         option.selected="selected"
+         option.disabled="true"
+         select.options.add(option,1)
+         
+         cats.forEach(element => {
+           option = document.createElement('option');
+           option.text=element
+           select.options.add(option,1)
+          });
+          select.required = "required"; 
+          div0.appendChild(div1);
+      div1.appendChild(select);
+
+     
+      let div2 = document.createElement('div');
+      div2.className="col-lg-6 col-md-6 col-sm-12 p-1 mt-2 "
+      let input2 = document.createElement("input");
+      ID=i+"[name]"
+      input2.name=ID
+      input2.className="col-lg-12 p-2 mb-3" 
+      input2.placeholder="meal name"
+      input2.required=true
+      div0.appendChild(div2);
+      div2.appendChild(input2);
+
+      let div3 = document.createElement('div');
+      div3.className="col-lg-6 col-md-6 col-sm-12 p-1 mt-2 "
+      input3 = document.createElement("input");
+      input3.type="number"
+      input3.required=true
+      ID=i+"[price]"
+      input3.name=ID
+      input3.className="col-lg-12 p-2 mb-3" 
+      input3.placeholder="price"
+      div0.appendChild(div3);
+      div3.appendChild(input3);
+       
+      let div4 = document.createElement('div');
+      div4.className="col-lg-6 col-md-6 col-sm-12 p-1 mt-2 "
+      input4 = document.createElement("input");
+      ID=i+"[description]"
+      input4.name=ID
+      input4.className="col-lg-12 p-2 mb-3" 
+      input4.placeholder="meal description"
+      input4.required=true
+      div0.appendChild(div4);
+      div4.appendChild(input4);
+      // let p4 =document.createElement("p");
+        //node = document.createTextNode("description");
+       //p4.appendChild(node);
+      //div1.appendChild(p4);
+      
+
+      i++;
+
+  //div0.appendChild(input4);
+
+ } 
+ form()
+
+  add.addEventListener("click",()=>form());
+
+
+
+  //////////////////////////////////////////////////////////////////////////////////////
+  let password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  console.log("aloooo")
+  if(password.value != confirm_password.value) {
+    console.log("worong")
+    confirm_password.setCustomValidity("Passwords Don't Match");
+    confirm_password.reportValidity();
+     
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+confirm_password.addEventListener("change", ()=>validatePassword());
+confirm_password.addEventListener("change", ()=>validatePassword());
+
+
+</script>
+<script>
+  //edit category
+  function getid(id){
+   let model= document.getElementById("catagory")
+  let inputttt = document.createElement("input");
+  inputttt.value=id
+ inputttt.name="oldcategory"
+ inputttt.style.display="none";
+   model.appendChild(inputttt);
+  console.log(id)
+  }
+  //edit meal
+  function getid2(id){
+   let model= document.getElementById("menu")
+   let catagoryname=""
+   let mealname=""
+   let price=""
+   let description=""
+   let str=""
+   console.log(id)
+for(let j=0;j<id.length;j=j+1){
+if(id[j]===','){
+
+catagoryname=str
+
+str=""
+}
+else if(id[j]=='-'){
+mealname=str;
+str=""
+}
+else if(id[j]=='_'){
+price=str;
+price = parseInt(price)
+str=""
+}
+else if(j==id.length-1){
+str=str+id[j]
+description=str;
+}
+else
+str=str+id[j]
+}
+
+  let inputttt1 = document.createElement("input");
+  inputttt1.value=catagoryname
+ inputttt1.name="oldcategory"
+ inputttt1.style.display="none";
+   model.appendChild(inputttt1);
+  
+
+   let inputttt2 = document.createElement("input");
+   inputttt2.value=mealname
+   inputttt2.name="oldname"
+ inputttt2.style.display="none";
+   model.appendChild(inputttt2);
+  
+
+  let newname= document.getElementById("newname")
+  newname.required =true
+  newname.value=mealname
+  let newprice= document.getElementById("newprice")
+  newprice.value=price
+  newprice.required =true
+  let newdescription= document.getElementById("newdescription")
+  newdescription.value=description
+  }
+  //delet category
+  function getid3(id){
+    form=document.getElementById("DELETEcategory")
+    let inputttt = document.createElement("input");
+    inputttt.value=id
+    inputttt.name="oldcategory"
+    inputttt.style.display="none";
+    form.appendChild(inputttt);
+    console.log(id)
+  }
+  //delelt meal 
+  function getid4(id){
+    "DELETE-category-meal"
+    let model= document.getElementById("deletmealform")
+   let catagoryname=""
+   let mealname=""
+   str=""
+   console.log(id)
+for(let j=0;j<id.length;j=j+1){
+  console.log()
+if(id[j]===','){
+
+catagoryname=str
+
+str=""
+}
+else if(j==id.length-1){
+str=str+id[j]
+mealname=str;
+}
+else
+str=str+id[j]
+}
+
+  let inputttt1 = document.createElement("input");
+  inputttt1.value=catagoryname
+ inputttt1.name="oldcategory"
+ inputttt1.style.display="none";
+   model.appendChild(inputttt1);
+  
+
+   let inputttt2 = document.createElement("input");
+   inputttt2.value=mealname
+   inputttt2.name="oldname"
+ inputttt2.style.display="none";
+   model.appendChild(inputttt2);
+  
+  }
+  
+</script>
+<script>
+  function onpageload(){
+    let emailerror='<%=errorss.email%>';
+    let usererror='<%=errorss.username%>';
+    let passworderror='<%=errorss.password%>';
+    let restphoneerror='<%=errorss.restphoneerror%>'
+    changePasswordButton=document.getElementById("changePasswordButton")
+    restsittingsButton=document.getElementById("restsittingsButton")
+    console.log(passworderror)
+    if(passworderror!=0){
+      changePasswordButton.click()
+    }
+    else if(emailerror!=0||usererror!=0){
+      restsittingsButton.click()
+    }
+  }
+</script>
+
+
+<script>
+
+  const tableNumber = document.getElementById("tableNumber");
+  const numOfPersons = document.getElementById("people");
+  const Form = document.getElementById("form");
+  const errorElement = document.getElementById("error");
+
+  Form.addEventListener("submit", (e)=>{
+
+
+    let messages = [];
+
+    if(numOfPersons.value> 12){
+     messages.push('Notice: maximum number of persons is 12');
+    }else if( numOfPersons.value <= 0 ){
+     messages.push('Notice: can\'t set a table less than or equal to zero guests');
+   }
+
+    if(tableNumber.value > 100){
+      messages.push('Notice: maximum number of tables is 100');
+    
+   }else if( tableNumber.value <= 0 ){
+     messages.push('Notice: can\'t set a table less than or equal to zero');
+   }
+
+   
+   if(messages.length > 0 ){
+     // to cancel our form from submitting and reload the page
+    e.preventDefault();
+    errorElement.innerText = messages.join(', ')
+   }
+    
+
+  });
+</script>
+
+<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+
+    <script>
+        var pusher = new Pusher('cec6a5d9e1c6f055500d', { cluster: 'mt1' });
+    
+        // retrieve the socket ID once we're connected
+        pusher.connection.bind('connected', function () {
+            // attach the socket ID to all outgoing Axios requests
+            axios.defaults.headers.common['X-Socket-Id'] = pusher.connection.socket_id;
+        });
+    
+        // request permission to display notifications, if we don't alreay have it
+        Notification.requestPermission();
+        pusher.subscribe('notifications')
+                .bind('reservation', function (rest) {
+                    // if we're on the home page, show an "Updated" badge
+                    if (window.location.pathname === "/restprofile") {
+                        var notification = new Notification(rest.reservation + " A new table reservation");
+                        notification.onclick = function (event) {
+                        window.location.href = '/restprofile';
+                        event.preventDefault();
+                        notification.close();
+                    }
+                       
+                    }
+                    
+                });
+    </script>
+
+</body>
+  </html>

@@ -1,1 +1,2 @@
-# Ehgezly
+# SnyderCut
+Our great Galsa
